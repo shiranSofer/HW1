@@ -14,16 +14,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final String playerName = ((EditText)findViewById(R.id.edit_text_name)).getText().toString();
-        final String playerAge = ((EditText)findViewById(R.id.edit_text_age)).getText().toString();
-        Log.i("name", playerName.toString());
 
         findViewById(R.id.button_enter).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                final String playerName = ((EditText)findViewById(R.id.edit_text_name)).getText().toString();
+                final String playerAge = ((EditText)findViewById(R.id.edit_text_age)).getText().toString();
+
                 Intent intent = new Intent(MainActivity.this, LevelActivity.class);
-                intent.putExtra("my_name", playerName.toString());
-                intent.putExtra("my_age", playerAge.toString());
+                intent.putExtra("my_name", playerName);
+                intent.putExtra("my_age", playerAge);
 
                 startActivity(intent);
             }

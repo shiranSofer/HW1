@@ -3,6 +3,8 @@ package com.shira.hw1;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.EditText;
+import android.widget.TextView;
 
 public class LevelActivity extends AppCompatActivity {
 
@@ -14,8 +16,10 @@ public class LevelActivity extends AppCompatActivity {
         Bundle extras = getIntent().getExtras();
         String playerName = extras.getString("my_name");
         String playerAge = extras.getString("my_age");
-        Log.d("name: ", playerName);
-        Log.d("age: ", playerAge);
+
+        ((TextView)findViewById(R.id.text_view_hello_player)).setText("Hello " + playerName.toString());
+        ((TextView)findViewById(R.id.text_view_hello_age)).setText("Your age " + playerAge);
+
     }
 
 }
