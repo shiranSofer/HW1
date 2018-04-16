@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">HW1</string>
+    <string name="app">Emoji Memory Game</string>
+    <string name="Player">Player</string>
+    <string name="Time">Time Left</string>
+    <string name="timer">0</string>
+    <string name="level_welcome_name">Hello</string>
+    <string name="level_welcome_age">Age:</string>
+    <string name="level_player_age">0</string>
 </resources>

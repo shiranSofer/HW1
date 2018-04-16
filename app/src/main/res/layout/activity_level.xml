@@ -1,70 +1,113 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.shira.hw1.LevelActivity">
+    tools:context="com.shira.hw1.LevelActivity"
+    android:background="#ffffff">
 
-    <TextView
-        android:id="@+id/text_view_hello_player"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:textAlignment="center"
-        android:textColor="@color/colorAccent"
-        android:textSize="20dp"
-        tools:layout_editor_absoluteX="163dp"
-        tools:layout_editor_absoluteY="44dp" />
 
-    <TextView
-        android:id="@+id/text_view_hello_age"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:textAlignment="center"
-        android:textColor="@color/colorAccent"
-        android:textSize="20dp" />
-
-    <TextView
-        android:id="@+id/text_view_level"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:gravity="center"
-        android:text="Choose your level"
-        android:textAlignment="center"
-        android:textColor="@color/colorAccent"
-        android:textSize="20dp" />
     <LinearLayout
+        android:id="@+id/player_name_info_bar"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:orientation="horizontal"
-        android:layout_gravity="center">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
-        <CheckBox
-            android:id="@+id/checkbox_easy"
+        <TextView
+            android:id="@+id/text_view_welcome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="@string/level_welcome_name"
+            android:textSize="20sp"
             android:layout_weight="1"
-            android:checked="false"
-            android:text="easy" />
+            />
 
-        <CheckBox
-            android:id="@+id/checkbox_middle"
+
+        <TextView
+            android:id="@+id/text_view_player_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="@string/Player"
+            android:textSize="20sp"
             android:layout_weight="1"
-            android:checked="false"
-            android:text="midd" />
-
-        <CheckBox
-            android:id="@+id/checkbox_hard"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="hard" />
-
+            />
     </LinearLayout>
 
-</LinearLayout>
+    <LinearLayout
+        android:id="@+id/player_age_info_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/player_name_info_bar">
+
+        <TextView
+            android:id="@+id/text_view_welcome_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/level_welcome_age"
+            android:textSize="20sp"
+            android:layout_weight="1"
+            android:layout_gravity="left"
+            />
+
+        <TextView
+            android:id="@+id/text_view_player_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/level_player_age"
+            android:textSize="20sp"
+            android:layout_weight="1"
+            android:layout_gravity="right"
+            />
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/select_level"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="65dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+    <Button
+        android:id="@+id/button_easy"
+        android:background="@drawable/easy"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:clickable="true"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/button_medium"
+        android:layout_toStartOf="@+id/button_medium" />
+
+    <Button
+        android:id="@+id/button_medium"
+        android:background="@drawable/medium"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_alignTop="@+id/button_easy"
+        android:layout_centerHorizontal="true"
+        android:clickable="true"/>
+
+    <Button
+        android:id="@+id/button_hard"
+        android:background="@drawable/hard"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:clickable="true"
+        android:layout_alignTop="@+id/button_medium"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@+id/button_medium"
+        android:layout_toEndOf="@+id/button_medium" />
+
+</RelativeLayout>
